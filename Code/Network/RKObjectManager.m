@@ -678,7 +678,7 @@ static NSString *RKMIMETypeFromAFHTTPClientParameterEncoding(AFRKHTTPClientParam
         }
     } else {
         // Non-Core Data operation
-        operation = [self objectRequestOperationWithRequest:request responseDescriptors:matchingDescriptors success:nil failure:nil];
+        operation = [self objectRequestOperationWithRequest:request responseDescriptors:self.responseDescriptors success:nil failure:nil];
     }
 #else
     // Non-Core Data operation

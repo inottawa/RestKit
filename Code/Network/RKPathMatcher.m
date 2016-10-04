@@ -97,13 +97,13 @@ NSString *RKPathFromPatternWithObject(NSString *pathPattern, id object)
     
     // Bifurcate Source Path From Query Parameters
     
-    if ([components count] > 1) {
-        rootPath = [components objectAtIndex:0];
-        NSDictionary *queryParameters = RKQueryParametersFromStringWithEncoding([components objectAtIndex:1], NSUTF8StringEncoding);
-        if (shouldTokenize) {
-            [argumentsCollection addEntriesFromDictionary:queryParameters];
-        }
-    }
+    // if ([components count] > 1) {
+    //     rootPath = [components objectAtIndex:0];
+    //     NSDictionary *queryParameters = RKQueryParametersFromStringWithEncoding([components objectAtIndex:1], NSUTF8StringEncoding);
+    //     if (shouldTokenize) {
+    //         [argumentsCollection addEntriesFromDictionary:queryParameters];
+    //     }
+    // }
     
     bool rootPathMatchesPattern = RKNumberOfSlashesInString(pattern) == RKNumberOfSlashesInString(rootPath);
     
